@@ -1,6 +1,6 @@
 # first-project
 Component folder:
------data.jsx-------- 
+                                                                      -----data.jsx-------- 
 
 import {FiFlag, FiShield} from 'react-icons/fi'
 
@@ -233,7 +233,7 @@ export const FooterData = [
     },
 ]
 
-------Footer.jsx------------
+                                                                        ------Footer.jsx------------
 
 import React from 'react'
 
@@ -269,7 +269,8 @@ const Footer = () => {
 export default Footer
 
 
--------Item.jsx----
+                                                                                 -------Item.jsx----
+                                                                                 
 
 import React from 'react'
 
@@ -315,7 +316,8 @@ export const NavData = [
     }
 ]
 
----------Popup.jsx------------
+                                                                          ---------Popup.jsx------------
+                                                                          
 
 import React, {useState} from 'react'
 
@@ -340,9 +342,9 @@ const Popup = () => {
  {popup ? 
  <div className='card'>
      <h1>Popup</h1>
-     <p>oooooooooooooooooooooooooo...</p>
-     <p>oooooooooooooooooooooooooo...</p>
-     <p>oooooooooooooooooooooooooo...</p>
+     <p>poooooooooooooooooooooooooo...</p>
+     <p>poooooooooooooooooooooooooo...</p>
+     <p>poooooooooooooooooooooooooo...</p>
  </div> : null
 }
     </div>
@@ -351,7 +353,8 @@ const Popup = () => {
 
 export default Popup
 
------User.jsx------
+                                                                         -----User.jsx------
+                                                                         
 
 import React from 'react'
 
@@ -379,7 +382,7 @@ export default User
 
 
 
-Pages Folder:
+                                                            Pages Folder:
 
 HomePage,
 
@@ -392,7 +395,8 @@ ProductPage.
 
 
 
--------App.jsx----------
+                                                             -------App.jsx----------
+                                                             
 
 import './App.scss';
 
@@ -435,7 +439,8 @@ export default App
 
  
 
---------Nav.jsx----------
+                                                                         --------Nav.jsx----------
+                                                                         
 
 import React from 'react'
 
@@ -485,7 +490,8 @@ const Nav = () => {
 export default Nav
 
 
---------Productmegamenu.jsx------------
+                                                                    --------Productmegamenu.jsx------------
+                                                                    
 
 import React from 'react'
 
