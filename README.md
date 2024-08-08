@@ -17,6 +17,7 @@ export const Data = [
         description:'Receive alerts for compromised website and this is, Receive alerts for compromised website and this is'
     },
     {
+    
         icon:<BiKey/>,
         title:'Advanced Encryption',
         description:'Receive alerts for compromised website and this is, Receive alerts for compromised website and this is'
@@ -46,6 +47,7 @@ export const FooterData = [
                 link:'Pricing & Packaging',
                 to:'/'
             },
+            
             {
                 link:'Contact Us',
                 to:'/'
@@ -282,6 +284,7 @@ export const NavData = [
         title: 'Title1',
         description: 'Lorem Ipsun dolor .....'
     },
+    
     {
         icon:<FiShield/>,
         title: 'Title2',
@@ -354,3 +357,119 @@ const User = () => {
 }
 
 export default User
+
+
+
+Pages Folder:
+
+HomePage,
+AboutPage,
+BlogPage,
+ProductPage.
+
+
+
+
+-------App.jsx----------
+import './App.scss';
+import { Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import Nav from './Nav';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Blog from './pages/Blog';
+import About from './pages/About';
+import Products from './pages/Products';
+import User from './components/User';
+
+
+function App() {
+  
+   return(
+    <Router>
+     <Nav />
+     <Switch>
+        <Route exact path='/' Component={Home}/>
+        <Route  path='/' Component={Blog}/>
+        <Route  path='/' Component={About}/>
+        <Route  path='/' Component={Products}/>
+     </Switch>
+     <User />
+     <Footer />
+    </Router>
+   );
+  
+}
+
+export default App
+
+ 
+
+--------Nav.jsx----------
+import React from 'react'
+import { Link } from 'react-router-dom'
+import './nav.scss'
+import {AiFillApple} from 'react-icons/ai'
+import Productsmegamenu from './Productsmegamenu'
+import {MdKeyboardArrowDown} from 'react-icons'
+
+const Nav = () => {
+  return (
+    <div className='nav'>
+    <Link to='/' className='title'>
+      <AiFillApple /> Title
+     </Link>
+     <div className='links'>
+      <div className='nav-link'>
+      <Link to='/'>Products<MdKeyboardArrowDown/></Link>
+      <Productsmegamenu />
+      </div>
+
+      <div className='nav-link'>
+      <Link to='/'>Blog</Link>
+      </div>
+
+      <div className='nav-link'>
+      <Link to='/'>About Us</Link>
+      </div>
+
+      <div className='nav-link'>
+      <Link to='/'>Suport</Link>
+      </div>
+    </div>
+
+   <div className='auth'>
+   <Link to='/'>Log In</Link>
+   <Link to='/'>Sing Up</Link>
+    </div>
+    </div>
+  );
+}
+
+export default Nav
+
+
+--------Productmegamenu.jsx------------
+import React from 'react'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+import { NavData } from './components/NavData'
+const Productsmegamenu = () => {
+  return (
+    <div className='nav-megamenu'>
+    {NavData.map((props) => {
+        return(
+            <div className='menu-link'>
+             <Link to={props.to}>
+              <div className='icon'>{props.icon}</div>
+               <div className='block'>
+                <h6>{props.title}</h6>
+                <p>{props.description}</p>
+               </div>
+             </Link>
+            </div>
+        )
+    })}
+    </div>
+  )
+}
+
+export default Productsmegamenu
