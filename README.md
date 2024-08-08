@@ -1,10 +1,15 @@
 # first-project
 Component folder:
 -----data.jsx-------- 
+
 import {FiFlag, FiShield} from 'react-icons/fi'
+
 import {BiWalletAlt, BiKey} from 'react-icons/bi'
+
 import {FaPlane} from 'react-icons/fa'
+
 import {RiCustomerServiceFill} from 'react-icons/ri'
+
 export const Data = [
     {
         icon:<FiFlag/>,
@@ -229,10 +234,15 @@ export const FooterData = [
 ]
 
 ------Footer.jsx------------
+
 import React from 'react'
+
 import { Link } from 'react-router-dom'
+
 import './footer.scss'
+
 import { FooterData } from './data'
+
 
 
 const Footer = () => {
@@ -260,6 +270,7 @@ export default Footer
 
 
 -------Item.jsx----
+
 import React from 'react'
 
 const Item = (icon, title, description) => {
@@ -275,7 +286,9 @@ const Item = (icon, title, description) => {
 export default Item
 
 -----NavData.jsx-------
+
 import {FiFlag, FiShield} from 'react-icons/fi'
+
 import {BiWalletAlt, BiKey} from 'react-icons/bi'
 
 export const NavData = [
@@ -303,7 +316,9 @@ export const NavData = [
 ]
 
 ---------Popup.jsx------------
+
 import React, {useState} from 'react'
+
 import './user.scss'
 
 const Popup = () => {
@@ -337,9 +352,13 @@ const Popup = () => {
 export default Popup
 
 -----User.jsx------
+
 import React from 'react'
+
 import { Data } from './data'
+
 import './user.scss'
+
 import Item from './Item'
 
 const User = () => {
@@ -363,22 +382,34 @@ export default User
 Pages Folder:
 
 HomePage,
+
 AboutPage,
+
 BlogPage,
+
 ProductPage.
 
 
 
 
 -------App.jsx----------
+
 import './App.scss';
+
 import { Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+
 import Nav from './Nav';
+
 import Footer from './components/Footer';
+
 import Home from './pages/Home';
+
 import Blog from './pages/Blog';
+
 import About from './pages/About';
+
 import Products from './pages/Products';
+
 import User from './components/User';
 
 
@@ -455,9 +486,13 @@ export default Nav
 
 
 --------Productmegamenu.jsx------------
+
 import React from 'react'
+
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+
 import { NavData } from './components/NavData'
+
 const Productsmegamenu = () => {
   return (
     <div className='nav-megamenu'>
